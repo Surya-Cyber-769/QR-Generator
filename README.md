@@ -27,7 +27,34 @@ Before running this project, make sure you have:
 
 ## 🛠️ Installation & Setup
 
-Follow these steps carefully:
+### Follow these steps carefully:
+
+1️⃣ Update and Upgrade all packages 📦
+```bash
+apt update && apt upgrade -y
+```
+2️⃣ Install python and git
+```bash
+pkg install python git -y
+```
+3️⃣ Install qrcode and pillow
+```bash
+pip3 install qrcode pillow
+```
+4️⃣ Clone the repository
+```bash
+git clone https://github.com/Surya-Cyber-769/QR-Generator.git
+```
+5️⃣ Go into the project folder 📁
+```bash
+cd QR-Generator
+```
+6️⃣ Run the program
+```bash
+python3 qr.py
+```
+
+### One line commands
 ```bash
 apt update && apt upgrade -y
 pkg install python git -y
