@@ -32,3 +32,8 @@ Follow these steps carefully:
 ### 1️⃣ Update system packages
 ```bash
 apt update && apt upgrade -y
+pkg install python git -y
+pip3 install qrcode pillow
+git clone https://github.com/Surya-Cyber-769/QR-Generator.git
+cd QR-Generator
+python3 qr.py
