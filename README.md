@@ -29,7 +29,7 @@ Before running this project, make sure you have:
 
 ### Follow these steps carefully:
 
-1️⃣ Update and Upgrade all packages 📦
+1️⃣ Update and Upgrade all packages
 ```bash
 apt update && apt upgrade -y
 ```
@@ -45,7 +45,7 @@ pip3 install qrcode pillow
 ```bash
 git clone https://github.com/Surya-Cyber-769/QR-Generator.git
 ```
-5️⃣ Go into the project folder 📁
+5️⃣ Go into the project folder
 ```bash
 cd QR-Generator
 ```
@@ -54,7 +54,7 @@ cd QR-Generator
 python3 qr.py
 ```
 
-### One line commands
+### One line command
 ```bash
 apt update && apt upgrade -y
 pkg install python git -y
