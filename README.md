@@ -28,8 +28,6 @@ Before running this project, make sure you have:
 ## 🛠️ Installation & Setup
 
 Follow these steps carefully:
-
-### 1️⃣ Update system packages
 ```bash
 apt update && apt upgrade -y
 pkg install python git -y
