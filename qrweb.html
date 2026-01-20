@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- QRCode Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+    <style>
+        body {
+            background: #0f172a;
+            color: #e5e7eb;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            background: #020617;
+            padding: 25px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: #22c55e;
+            color: #000;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+
+        .error {
+            color: #ef4444;
+            margin-top: 10px;
+        }
+
+        #qrcode {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>📌 QR Code Generator</h1>
+
+    <input type="text" id="link" placeholder="Enter your link">
+
+    <button onclick="generateQR()">Generate QR</button>
+
+    <div id="error" class="error"></div>
+    <div id="qrcode"></div>
+</div>
+
+<script>
+    function generateQR() {
+        const link = document.getElementById("link").value.trim();
+        const qrDiv = document.getElementById("qrcode");
+        const errorDiv = document.getElementById("error");
+
+        qrDiv.innerHTML = "";
+        errorDiv.innerHTML = "";
+
+        if (!link) {
+            errorDiv.innerHTML = "❌ No link entered";
+            return;
+        }
+
+        new QRCode(qrDiv, {
+            text: link,
+            width: 200,
+            height: 200,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    }
+</script>
+
+</body>
+</html>
