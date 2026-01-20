@@ -62,3 +62,4 @@ pip3 install qrcode pillow
 git clone https://github.com/Surya-Cyber-769/QR-Generator.git
 cd QR-Generator
 python3 qr.py
+```
